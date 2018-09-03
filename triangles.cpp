@@ -64,7 +64,7 @@ Triangles::CreateShaderProgram()
     _vertexBuffer.create();
     _vertexBuffer.bind();
     _vertexBuffer.setUsagePattern(QOpenGLBuffer::StaticDraw);
-    _vertexBuffer.allocate(_vertexes, _vertexCount);
+    _vertexBuffer.allocate(_vertexes, _vertexCount * sizeof(QVector3D));
 
     _vertexArrayObject.create();
     _vertexArrayObject.bind();
